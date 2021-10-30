@@ -1,3 +1,10 @@
+:root {
+  --axisSize: 55px;
+  --axisMargin: 6.5px;
+  --gridUnitHeight: 70px;
+  --gridHeight: 725px;
+}
+
 main {
   text-align: center;
 }

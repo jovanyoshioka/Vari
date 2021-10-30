@@ -28,5 +28,6 @@
 
     <script src="../js/main.js"></script>
     <script src="../js/landing.js"></script>
+    <script src="../js/classSearch.js"></script>
   </body>
 </html>
