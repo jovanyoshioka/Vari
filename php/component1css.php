@@ -2,18 +2,11 @@
 
   echo '
     <style>
-      :root {
-        --axisSize: 55px;
-        --axisMargin: 6.5px;
-        --gridUnitHeight: 70px;
-      }
-
       div.schedule-container {
         width: 1100px;
-        height: calc(783.5px + var(--axisSize) + var(--axisMargin));
         margin-right: 20px;
         display: inline-block;
-    }
+      }
 
       /* Days of Week */
       div.schedule-container div.days {
@@ -39,8 +32,8 @@
       /* Times */
       div.schedule-container div.times {
         width: var(--axisSize);
-        height: 725px;
-        float: left;
+        height: var(--gridHeight);
+        margin-right: var(--axisMargin);
         border-radius: 10px 0 0 10px;
         display: inline-block;
         background-color: #ffffff;
@@ -60,7 +53,7 @@
       /* Grid/Classes */
       div.schedule-container div.grid {
         width: calc(100% - (var(--axisSize) + var(--axisMargin)));
-        height: 725px;
+        height: var(--gridHeight);
         margin-bottom: 7.5px;
         float: right;
         position: relative;
@@ -87,11 +80,6 @@
         color: #ffffff;
         transition: background-color 0.25s, opacity 0.25s;
       }
-      div.schedule-container div.grid button h1,
-      div.schedule-container div.grid button h2 {
-        margin: 0;
-        padding: 0;
-      }
       /* Class Title */
       div.schedule-container div.grid button h1 {
         font-size: 1.85em;
@@ -100,7 +88,44 @@
       div.schedule-container div.grid button h2 {
         font-size: 1.5em;
       }
-        
+
+      /* Overview of Classes */
+      div.schedule-container div.overview {
+        width: calc(100% - (var(--axisSize) + var(--axisMargin)));
+        height: 300px;
+        margin: var(--axisMargin) 0 var(--axisMargin) calc(var(--axisSize) + var(--axisMargin));
+        background-color: #ffffff;
+        text-align: left;
+        overflow: auto;
+      }
+      div.schedule-container div.overview div section {
+        min-height: 100px;
+        padding: 10px;
+        display: inline-block;
+        float: left;
+        clear: none;
+        border-bottom: 1px solid #999999;
+      }
+      div.schedule-container div.overview div section:nth-of-type(2) { width: calc((100% - 100px - 60px) / 3 * 1.25); }
+      div.schedule-container div.overview div section:nth-of-type(3) { width: calc((100% - 100px - 60px) / 3 * 1.75); }
+      div.schedule-container div.overview div section:nth-of-type(4) { width: 75px; display: flex; justify-content: center; align-items: center; }
+      div.schedule-container div.overview div section h1,
+      div.schedule-container div.overview div section h2 {
+        color: #000000;
+      }
+      div.schedule-container div.overview div section h1 {
+        font-size: 2em;
+      }
+      /* Remove Button */
+      div.schedule-container div.overview div section:nth-of-type(4) button {
+        font-size: 2.5em;
+        background-color: transparent !important;
+        color: #000000;
+      }
+      div.schedule-container div.overview div section:nth-of-type(4) button:hover {
+        color: #444444;
+      }
+
       /* Previous/Next Variation Buttons and Variation Numbers */
       div.schedule-container footer {
         width: 100%;
