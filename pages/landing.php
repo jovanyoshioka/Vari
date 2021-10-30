@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="../css/global.css">
     <link rel="stylesheet" type="text/css" href="../css/landing.css">
+    <link rel="stylesheet" type="text/css" href="../assets/fontawesome-5.15.3/css/all.min.css">
     <?php
       include('../php/component1css.php');
       include('../php/component2css.php');
@@ -18,10 +19,12 @@
 
     <h1>Hello World!</h1>
 
-    <?php
-      include('../php/component1.php');
-      include('../php/component2.php');
-    ?>
+    <main>
+      <?php
+        include('../php/component1.php');
+        include('../php/component2.php');
+      ?>
+    </main>
 
     <script src="../js/main.js"></script>
     <script src="../js/landing.js"></script>
