@@ -9,10 +9,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="../css/global.css">
     <link rel="stylesheet" type="text/css" href="../css/landing.css">
+    <?php
+      include('../php/component1css.php');
+      include('../php/component2css.php');
+    ?>
   </head>
   <body>
 
     <h1>Hello World!</h1>
+
+    <?php
+      include('../php/component1.php');
+      include('../php/component2.php');
+    ?>
 
     <script src="../js/main.js"></script>
     <script src="../js/landing.js"></script>
