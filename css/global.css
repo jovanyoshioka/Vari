@@ -1,0 +1,12 @@
+:root {
+  --font: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body { 
+  background-color: #ff8200;
+}
+
+h1 {
+  color: #ffffff;
+  font-family: var(--font);
+}
