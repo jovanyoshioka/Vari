@@ -255,7 +255,7 @@ const data = [
     crn: 20232,
     info: {
       title: "MUCO 110",
-      professor: "Dr. Music",
+      professor: "Dr. Beat",
       format: "",
       color: "#15C9C6"
     },
@@ -269,7 +269,7 @@ const data = [
     crn: 20233,
     info: {
         title: "MUCO 110",
-        professor: "Dr. Music",
+        professor: "Dr. Note",
         format: "",
         color: "#15C9C6"
       },
@@ -277,62 +277,6 @@ const data = [
           {day: 1, startTime: 780, duration: 50, type: "Lecture"},
           {day: 3, startTime: 780, duration: 50, type:"Lecture"},
           {day: 5, startTime: 780, duration: 50, type: "Lecture"}
-      ]
-  },
-  {
-    crn: 20234,
-    info: {
-        title: "MUCO 110",
-        professor: "Dr. Music",
-        format: "",
-        color: "#15C9C6"
-      },
-      schedule: [
-          {day: 1, startTime: 855, duration: 50, type: "Lecture"},
-          {day: 3, startTime: 855, duration: 50, type:"Lecture"},
-          {day: 5, startTime: 855, duration: 50, type: "Lecture"}
-      ]
-  },
-  {
-    crn: 20235,
-    info: {
-        title: "MUCO 110",
-        professor: "Dr. Note",
-        format: "",
-        color: "#15C9C6"
-      },
-      schedule: [
-          {day: 1, startTime: 930, duration: 50, type: "Lecture"},
-          {day: 3, startTime: 930, duration: 50, type:"Lecture"},
-          {day: 5, startTime: 930, duration: 50, type: "Lecture"}
-      ]
-  },
-  {
-    crn: 20236,
-    info: {
-        title: "MUCO 110",
-        professor: "Dr. Note",
-        format: "",
-        color: "#15C9C6"
-      },
-      schedule: [
-          {day: 1, startTime: 1005, duration: 50, type: "Lecture"},
-          {day: 3, startTime: 1005, duration: 50, type:"Lecture"},
-          {day: 5, startTime: 1005, duration: 50, type: "Lecture"}
-      ]
-  },
-  {
-    crn: 20237,
-    info: {
-        title: "MUCO 110",
-        professor: "Dr. Note",
-        format: "",
-        color: "#15C9C6"
-      },
-      schedule: [
-          {day: 1, startTime: 1080, duration: 50, type: "Lecture"},
-          {day: 3, startTime: 1080, duration: 50, type:"Lecture"},
-          {day: 5, startTime: 1080, duration: 50, type: "Lecture"}
       ]
   }
 ]
