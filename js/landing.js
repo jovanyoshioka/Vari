@@ -426,7 +426,11 @@ function updateOverview()
  */
 function prepAlgorithm(category, number, btn)
 {
-  var i, classes;
+  var i, classes, tip;
+
+  // Hide tip in overview interface.
+  tip = document.getElementsByClassName("tip")[0];
+  if (tip) tip.style.display = "none";
 
   btn.style.display = "none";
 

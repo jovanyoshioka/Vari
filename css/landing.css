@@ -6,6 +6,252 @@
   --overviewHeight: 300px;
 }
 
+h1#logo {
+  position: absolute;
+  top: 10px;
+  left: 25px;
+  color: #ffffff;
+  font-size: 3.25em;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
 main {
   text-align: center;
+}
+
+/**
+ * Left side of schedule interface.
+ */
+
+div.schedule-container {
+  width: 1100px;
+  margin-right: var(--axisMargin);
+  display: inline-block;
+}
+
+/* Days of Week */
+div.schedule-container div.days {
+  width: calc(100% - (var(--axisSize) + var(--axisMargin)));
+  height: var(--axisSize);
+  margin: 0 0 var(--axisMargin) calc(var(--axisSize) + var(--axisMargin));
+  position: relative;
+  border-radius: 10px 10px 0 0;
+  background-color: #ffffff;
+}
+/* Individual Day Axis Headers */
+div.schedule-container div.days div {
+  width: calc(100% / 7);
+  height: 100%;
+  float: left;
+  clear: none;
+  line-height: var(--axisSize);
+  font-size: 1.25em;
+  font-weight: 600;
+  font-family: var(--font);
+}
+
+/* Times */
+div.schedule-container div.times {
+  width: var(--axisSize);
+  height: var(--gridHeight);
+  margin-right: var(--axisMargin);
+  border-radius: 10px 0 0 10px;
+  display: inline-block;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+/* Individual Time Axis Headers */
+div.schedule-container div.times div {
+  width: 100%;
+  height: var(--gridUnitHeight);
+  padding-top: 5px;
+  border-bottom: 1px solid #999999;
+  font-size: 1.15em;
+  font-weight: 600;
+  font-family: var(--font);
+}
+  
+/* Grid/Classes */
+div.schedule-container div.grid {
+  width: calc(100% - (var(--axisSize) + var(--axisMargin)));
+  height: var(--gridHeight);
+  margin-bottom: 7.5px;
+  float: right;
+  position: relative;
+  background-color: #ffffff;
+  overflow: auto;
+}
+/* Grid Line */
+div.schedule-container div.grid div {
+  width: 100%;
+  /* Adding 5px for "div.times div" padding-top. */
+  height: calc(var(--gridUnitHeight) + 5px);
+  border-bottom: 1px solid #999999;
+}
+/* Class Card */
+div.schedule-container div.grid button {
+  /* height, top, left, background-color in JS */
+  width: calc(100% / 7);
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font);
+  color: #ffffff;
+  transition: background-color 0.25s, opacity 0.25s;
+}
+div.schedule-container div.grid button:hover {
+  cursor: auto;
+}
+/* Class Title */
+div.schedule-container div.grid button h1 {
+  font-size: 1.85em;
+}
+/* Class Type (e.g., Lecture, Lab, etc.) */
+div.schedule-container div.grid button h2 {
+  font-size: 1.5em;
+}
+
+/* Overview of Classes */
+div.schedule-container div.overview {
+  width: calc(100% - (var(--axisSize) + var(--axisMargin)));
+  height: var(--overviewHeight);
+  margin: var(--axisMargin) 0 var(--axisMargin) calc(var(--axisSize) + var(--axisMargin));
+  background-color: #ffffff;
+  text-align: left;
+  overflow: auto;
+  border-radius: 0 0 10px 10px;
+}
+div.schedule-container div.overview h1.tip {
+  color: #000000;
+  font-size: 2em;
+  text-align: center;
+  padding-top: 125px;
+}
+div.schedule-container div.overview div section {
+  min-height: 100px;
+  padding: 10px;
+  display: inline-block;
+  float: left;
+  clear: none;
+  border-bottom: 1px solid #999999;
+}
+div.schedule-container div.overview div section:nth-of-type(2) { width: calc((100% - 60px) / 3); }
+div.schedule-container div.overview div section:nth-of-type(3) { width: calc((100% - 60px) / 3 * 2); }
+div.schedule-container div.overview div section h1,
+div.schedule-container div.overview div section h2 {
+  color: #000000;
+}
+div.schedule-container div.overview div section h1 {
+  font-size: 2em;
+}
+
+/**
+ * Right side of schedule interface.
+ */
+
+/* Contains class search and Previous/Next Buttons */
+div.right-container {
+  width: 300px;
+  height: calc(var(--gridHeight) + var(--axisSize) + 2*var(--axisMargin) + var(--overviewHeight) + 3.5px);
+  display: inline-block;
+  vertical-align: top;
+}
+
+/*style the class search */
+div.classes-container {
+  height: calc(var(--gridHeight) + var(--axisSize) + var(--axisMargin));
+  background-color: #ffffff;
+  border-radius: 10px 10px 0 0;
+}
+
+/* Add a black background color to the top navigation bar */
+.topnav {
+  overflow: hidden;
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+
+/* Style the search box inside the  bar */
+.topnav input[type=text] {
+  width: 100%;
+  float: left;
+  padding: 12px 6px;
+  font-size: 1.5em;
+  border: none;
+  border-bottom: 3px solid #000000;
+  border-radius: 10px 10px 0 0;
+}
+
+/*style the class boxes*/
+.class_type button {
+  width: 100%;
+  padding: 20px 0;
+  font-size: 25px;
+  border-bottom: 1px solid #000000;
+}
+
+/*style the back boxes*/
+#back {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 1.5em;
+  border-bottom: 1px solid #000000;
+  display: none;
+}
+
+.category {
+  display: none;
+}
+.category button{
+  padding: 20px 0;
+  width: 100%;
+  font-size: 25px;
+  border-bottom: 1px solid #000000;
+}
+
+/* Variation Count and Prev/Next Buttons */
+div.right-container div.nav-container {
+  width: 100%;
+  height: var(--overviewHeight);
+  margin-top: calc(var(--axisMargin) + 3.5px);
+  position: relative;
+}
+div.right-container div.nav-container div {
+  width: 100%;
+  height: calc(var(--overviewHeight) - 65px - var(--axisMargin) - 3.5px);
+  background-color: #ffffff;
+
+}
+div.right-container div.nav-container div h1 {
+  font-size: 4em;
+  color: #000000;
+}
+div.right-container div.nav-container div h2 {
+  font-size: 3em;
+  padding-top: 40px;
+  color: #000000;
+}
+div.right-container div.nav-container button {
+  width: 145px;
+  height: 65px;
+  border: none;
+  font-size: 1.5em;
+  font-family: var(--font);
+  position: absolute;
+  bottom: 0;
+}
+div.right-container div.nav-container button:hover {
+  cursor: pointer;
+}
+/* Previous Variation Button */
+div.right-container div.nav-container button:nth-of-type(1) {
+  left: 0;
+  border-radius: 0 0 0 10px;
+}
+/* Next Variation Button */
+div.right-container div.nav-container button:nth-of-type(2) {
+  right: 0;
+  border-radius: 0 0 10px 0;
 }

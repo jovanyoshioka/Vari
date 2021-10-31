@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Vari</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Schedule web-based application for UTK VolHacks V hackathon.">
+    <meta name="keywords" content="Vari, Schedule, App, UTK, Jovan, Jovi, Yoshioka, Dong, Jun, Woun">
+    <meta name="author" content="Jovan Yoshioka, Dong Jun Woun">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../css/global.css">
+    <link rel="stylesheet" type="text/css" href="../css/landing.css">
+    <link rel="stylesheet" type="text/css" href="../assets/fontawesome-5.15.3/css/all.min.css">
+  </head>
+  <body>
+
+    <br /><br /><br />
+
+    <h1 id="logo">Vari</h1>
+
+    <main>
+
+      <!-- Left side of schedule interface -->
+      <div class="schedule-container">
+        <!-- Days of Week Header -->
+        <div class="days">
+          <div>Sunday</div>
+          <div>Monday</div>
+          <div>Tuesday</div>
+          <div>Wednesday</div>
+          <div>Thursday</div>
+          <div>Friday</div>
+          <div>Saturday</div>
+        </div>
+  
+        <!-- Times Sidebar -->
+        <div class="times">
+          <div>12am</div>
+          <div>1am</div>
+          <div>2am</div>
+          <div>3am</div>
+          <div>4am</div>
+          <div>5am</div>
+          <div>6am</div>
+          <div>7am</div>
+          <div>8am</div>
+          <div>9am</div>
+          <div>10am</div>
+          <div>11am</div>
+          <div>12pm</div>
+          <div>1pm</div>
+          <div>2pm</div>
+          <div>3pm</div>
+          <div>4pm</div>
+          <div>5pm</div>
+          <div>6pm</div>
+          <div>7pm</div>
+          <div>8pm</div>
+          <div>9pm</div>
+          <div>10pm</div>
+          <div>11pm</div>
+        </div>
+  
+        <!-- Grid/Classes -->
+        <div class="grid" onscroll="scrollTimes(this)">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+  
+        <!-- Overview of Classes -->
+        <div class="overview">
+          <h1 class="tip">Select a course on the right to get started!</h1>
+        </div>
+      </div>
+
+      <!-- Right side of schedule interface -->
+      <div class="right-container">
+      
+        <div class="classes-container">
+          <div class="topnav">
+            <input type="text" id="search" onkeyup="search()" placeholder="Search..." >
+          </div>
+          <button id="back" onclick="back()">
+            <i class="fas fa-chevron-left"></i> Back
+          </button>
+
+          <div class="class_type">
+            <button class="class_search" onclick="showCategory('cosc')">COSC</button>
+            <button class="class_search" onclick="showCategory('math')">MATH</button>
+            <button class="class_search" onclick="showCategory('phys')">PHYS</button>
+            <button class="class_search" onclick="showCategory('muco')">MUCO</button>
+          </div>
+
+          <div class="cosc category">
+            <button onclick="prepAlgorithm('cosc', 202, this)">202</button>
+            <button onclick="prepAlgorithm('cosc', 230, this)">230</button>
+          </div>
+
+          <div class="math category">
+            <button onclick="prepAlgorithm('math', 231, this)">231</button>
+          </div>
+
+          <div class="phys category">
+            <button onclick="prepAlgorithm('phys', 231, this)">231</button>
+          </div>
+
+          <div class="muco category">
+            <button onclick="prepAlgorithm('muco', 110, this)">110</button>
+          </div>
+        </div>
+
+        <div class="nav-container">
+          <div>
+            <h2>Variation</h2>
+            <h1><span id="currentCount">?</span> / <span id="totalCount">?</span></h1>
+          </div>
+          <button onclick="showPrevVariation()">
+            <i class="fas fa-chevron-left"></i>
+            Previous
+          </button>
+          <button onclick="showNextVariation()">
+            Next
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+
+      </div>
+
+    </main>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/data.js"></script>
+    <script src="../js/landing.js"></script>
+    <script src="../js/classSearch.js"></script>
+  </body>
+</html>
