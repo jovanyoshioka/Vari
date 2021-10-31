@@ -70,72 +70,7 @@
       </div>
 
       <!-- Overview of Classes -->
-      <div class="overview">
-        <div>
-          <!-- Color code -->
-          <section style="background-color:red;"></section>
-          <section>
-            <h1>COSC 202</h1>
-            <h2>Dr. Professor Comp</h2>
-            <h2>In-Person, CRN: 421523</h2>
-          </section>
-          <section>
-            <h2>Lecture: TR 9:50am - 11:05am</h2>
-            <h2>Lab: W 8:00am - 10:00am</h2>
-          </section>
-          <section>
-            <button>
-              <i class="fas fa-times"></i>
-            </button>
-          </section>
-        </div>
-        <div>
-          <!-- Color code -->
-          <section style="background-color:blue;"></section>
-          <section>
-            <h1>MATH 231</h1>
-            <h2>Dr. Professor Math</h2>
-            <h2>In-Person, CRN: 128527</h2>
-          </section>
-          <section>
-            <h2>Lecture: TR 11:30am - 12:45pm</h2>
-          </section>
-          <section>
-            <button>
-              <i class="fas fa-times"></i>
-            </button>
-          </section>
-        </div>
-        <div>
-          <!-- Color code -->
-          <section style="background-color:lime;"></section>
-          <section>
-            <h1>ECE 313</h1>
-            <h2>Dr. Professor Stats</h2>
-            <h2>In-Person, CRN: 912679</h2>
-          </section>
-          <section>
-            <h2>Lecture: MWF 3:30pm - 4:20pm</h2>
-          </section>
-          <section>
-            <button>
-              <i class="fas fa-times"></i>
-            </button>
-          </section>
-        </div>
-      </div>
-
-      <!-- Previous/Next Variation Buttons and Variation Numbers -->
-      <footer>
-        <button>
-          <i class="fas fa-chevron-left"></i>
-          Previous
-        </button>
-        <button>
-          Next
-          <i class="fas fa-chevron-right"></i>
-        </button>
-      </footer>
+      <div class="overview"></div>
     </div>
   ';
 

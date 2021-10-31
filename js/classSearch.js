@@ -1,6 +1,6 @@
-function math() {
+function showCategory(category) {
   var x = document.getElementsByClassName("class_type");
-  var y = document.getElementsByClassName("math_level");
+  var y = document.getElementsByClassName(category);
   for (i = 0; i < x.length; i++) {
     x[i].style.display = "none";
   }
@@ -8,11 +8,13 @@ function math() {
   for (i = 0; i < y.length; i++) {
     y[i].style.display = "block";
   }
+
+  document.getElementById("back").style.display = "block";
 }
 
 function back() {
   var x = document.getElementsByClassName("class_type");
-  var y = document.getElementsByClassName("math_level");
+  var y = document.getElementsByClassName("category");
   for (i = 0; i < x.length; i++) {
     x[i].style.display = "block";
   }
@@ -20,6 +22,8 @@ function back() {
   for (i = 0; i < y.length; i++) {
     y[i].style.display = "none";
   }
+
+  document.getElementById("back").style.display = "none";
 }
 
 function search() {

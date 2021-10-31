@@ -4,7 +4,7 @@
     <style>
       div.schedule-container {
         width: 1100px;
-        margin-right: 20px;
+        margin-right: var(--axisMargin);
         display: inline-block;
       }
 
@@ -80,6 +80,9 @@
         color: #ffffff;
         transition: background-color 0.25s, opacity 0.25s;
       }
+      div.schedule-container div.grid button:hover {
+        cursor: auto;
+      }
       /* Class Title */
       div.schedule-container div.grid button h1 {
         font-size: 1.85em;
@@ -92,11 +95,12 @@
       /* Overview of Classes */
       div.schedule-container div.overview {
         width: calc(100% - (var(--axisSize) + var(--axisMargin)));
-        height: 300px;
+        height: var(--overviewHeight);
         margin: var(--axisMargin) 0 var(--axisMargin) calc(var(--axisSize) + var(--axisMargin));
         background-color: #ffffff;
         text-align: left;
         overflow: auto;
+        border-radius: 0 0 10px 10px;
       }
       div.schedule-container div.overview div section {
         min-height: 100px;
@@ -106,9 +110,9 @@
         clear: none;
         border-bottom: 1px solid #999999;
       }
-      div.schedule-container div.overview div section:nth-of-type(2) { width: calc((100% - 100px - 60px) / 3 * 1.25); }
-      div.schedule-container div.overview div section:nth-of-type(3) { width: calc((100% - 100px - 60px) / 3 * 1.75); }
-      div.schedule-container div.overview div section:nth-of-type(4) { width: 75px; display: flex; justify-content: center; align-items: center; }
+      div.schedule-container div.overview div section:nth-of-type(2) { width: calc((100% - 60px) / 3); }
+      div.schedule-container div.overview div section:nth-of-type(3) { width: calc((100% - 60px) / 3 * 2); }
+      /*div.schedule-container div.overview div section:nth-of-type(4) { width: 75px; display: flex; justify-content: center; align-items: center; }*/
       div.schedule-container div.overview div section h1,
       div.schedule-container div.overview div section h2 {
         color: #000000;
@@ -117,41 +121,15 @@
         font-size: 2em;
       }
       /* Remove Button */
-      div.schedule-container div.overview div section:nth-of-type(4) button {
+      /*div.schedule-container div.overview div section:nth-of-type(4) button {
         font-size: 2.5em;
         background-color: transparent !important;
         color: #000000;
       }
       div.schedule-container div.overview div section:nth-of-type(4) button:hover {
         color: #444444;
-      }
-
-      /* Previous/Next Variation Buttons and Variation Numbers */
-      div.schedule-container footer {
-        width: 100%;
-        height: 50px;
-      }
-      div.schedule-container footer button {
-        width: 125px;
-        height: 100%;
-        border: none;
-        font-size: 1.5em;
-        font-family: var(--font);
-      }
-      div.schedule-container footer button:hover {
-        cursor: pointer;
-      }
-      /* Previous Variation Button */
-      div.schedule-container footer button:nth-of-type(1) {
-        margin-left: calc(var(--axisSize) + var(--axisMargin));
-        float: left;
-        border-radius: 0 0 0 10px;
-      }
-      /* Next Variation Button */
-      div.schedule-container footer button:nth-of-type(2) {
-        float: right;
-        border-radius: 0 0 10px 0;
-      }
+      }*/
+      
     </style>
   ';
 
